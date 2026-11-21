@@ -5,6 +5,10 @@ A command-line tool that loads a WAV file, applies a linear-phase FIR filter, pl
 
 The lowpass is a sinc kernel with a Hamming window, normalized so DC gain is 1. The highpass is spectral inversion: delta - lowpass, i.e. the original minus the lows. Kernels are odd-length (M = 4001) so the center tap lines up with the delta.
 
-How to use:
+# How to use:
 
 python FIR_filter.py path/to/file.wav
+
+# Requirements: 
+
+numpy, scipy, matplotlib, and sms-tools (https://github.com/MTG/sms-tools).
