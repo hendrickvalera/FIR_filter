@@ -68,7 +68,9 @@ def main():
     
     y = fftconvolve(x, h, mode="same")
 
-    UF.wavwrite(y, fs, "filtered.wav")
+    outName = f"{f_name.stem}_filtered.wav"
+
+    UF.wavwrite(y, fs, str(outName))
     printplot(h, fs)
     plt.show()
 
